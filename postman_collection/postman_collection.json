@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "4f5ec4bd-a844-43ce-8dd7-568897b4e3b9",
+		"name": "manage-recipe-service withBasicAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET When recipe not there",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE When recipe not there",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update when recipe not there",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\":1,\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": 34,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Aloo Paratha prepare instructions\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With correct input data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": 3,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Aloo Paratha prepare instructions\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With correct input data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mix Vegetable Soup\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": 5,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"4 cup chopped tomato\"\r\n    },\r\n    {    \r\n      \"name\": \"4 clove\"\r\n    },\r\n    {    \r\n      \"name\": \"2 tablespoon butter\"\r\n    },\r\n    {    \r\n      \"name\": \"1 medium sliced onion\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Mix Vegetable Soup prepare instructions\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wiht correct input data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\":1,\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": 34,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Aloo Paratha prepare instructions\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL When there is data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET When there is data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/recipes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET When there is data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/recipes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With invalid data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\":1,\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": 44,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": [{\"Aloo Paratha prepare instructions\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With invalid data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\":1,\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": dddddddddddddddd,\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Aloo Paratha prepare instructions\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With invalid data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "prasad",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "prasad",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aloo Paratha\",\r\n    \"veg\": \"true\",\t\t\r\n    \"suitableForNoOfPeople\": \"AAAAAAAAAAAAAAAAAAAA\",\r\n   \"ingredients\": [\r\n    {    \r\n      \"name\": \"2 potato\"\r\n    },\r\n    {    \r\n      \"name\": \"1 tablespoon coriander leaves\"\r\n    },\r\n    {    \r\n      \"name\": \"salt as required\"\r\n    },\r\n    {    \r\n      \"name\": \"1 cup wheat flour\"\r\n    }\r\n  ],\r\n  \"cookingInstructions\": \"Aloo Paratha prepare instructions\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recipes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
